@@ -1,0 +1,85 @@
+/*my first CSS archive*/
+
+p{
+    color:#baabba;
+    font-size: 20px;
+    font-family: Courier;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 3px 3px 3px #111111;
+}
+
+body{
+    background-color: #111111;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 960px;
+    margin: auto;
+}
+
+.efeito{
+    background-color:rgba(0, 0, 0, 0.5);
+    
+}
+
+header{
+    background-color: #223345;
+    height: 80px;
+    padding: 10px;
+}
+
+footer{
+    background-color: #222222;
+    height: 40px;
+    clear: both;
+    text-align: center;
+    font-family: 'Times New Roman';
+    font-style: italic;
+    color: #aaaaaa
+}
+
+#principal{
+    background-image: url('reddead.png');
+    background-size: 100%;
+    background-position: bottom;
+    min-height: 300px;
+    padding: 100px;
+}
+
+#logo{
+    float: left;
+}
+
+#menu{
+    margin-top: 30px;
+    float: right;
+}
+
+#menu a{
+    padding: 44px 10px;
+    text-decoration: none;
+    color: #baabba;
+    text-shadow: 1px 1px 1px #111111;
+}
+
+#menu a:hover{
+    background-color:rgba(2, 2, 2, 0.5);
+    color: #baabba;
+    -webkit-transition: 1s;
+}
+
+h1{
+    text-align: center;
+    color: #988998;
+    margin: -30px 0 20px 0;
+    text-shadow: 2px 2px 2px #111111;
+}
+
+
+
