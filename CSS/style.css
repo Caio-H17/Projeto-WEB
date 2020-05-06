@@ -45,7 +45,7 @@ footer{
 }
 
 #principal{
-    background-image: url('reddead.png');
+    background-image:url('imgs/bg.png');
     background-size: 100%;
     background-position: bottom;
     min-height: 300px;
