@@ -30,13 +30,13 @@ body{
 
 header{
     background-color: #223345;
-    height: 80px;
+    height: 40px;
     padding: 10px;
 }
 
 footer{
     background-color: #222222;
-    height: 40px;
+    min-height: 40px;
     clear: both;
     text-align: center;
     font-family: 'Times New Roman';
@@ -45,7 +45,7 @@ footer{
 }
 
 #principal{
-    background-image:('bg.png');
+    background-image: url('bg.png');
     background-size: 100%;
     background-position: bottom;
     min-height: 300px;
@@ -54,10 +54,23 @@ footer{
 
 #logo{
     float: left;
+    margin-bottom: 15px;
+}
+
+#eu{
+ float: left;   
+ margin-left: 200px;
+ margin-bottom: 20px;
+}
+
+#social{
+float: right;
+margin-right: 450px;
+margin-bottom: 20px;
 }
 
 #menu{
-    margin-top: 30px;
+    margin-top: 10px;
     float: right;
 }
 
