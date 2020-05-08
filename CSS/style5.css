@@ -1,9 +1,9 @@
 /*my first CSS archive*/
 
 p{
-    color: #baabba;;
+    color: #111111;;
     font-size: 20px;
-    font-family: Courier;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
     text-align: center;
 }
@@ -26,7 +26,6 @@ header{
     background-color: #223345;
     height: 61px;
     padding: 10px;
-    position: fixed;
 }
 
 footer{
@@ -40,15 +39,27 @@ footer{
 }
 
 #principal{
-    background-color: #222222;
+    background-image: url('bg.png');
     background-size: 100%;
     background-position: bottom;
     min-height: 300px;
-    padding: 100px;
+    padding: 10px;
+}
+
+i {
+    text-align: center;
+}
+a {
+    color: #baabba;
+}
+
+a:hover {
+    color: #223345;
 }
 
 tr {
     color: #fff;
+    text-shadow: #696969 4px 8px 20px;
     font-size: 20px;
     text-align: center;
 }
@@ -60,12 +71,18 @@ thead {
 
 label {
     color: #223345;
-    font-size: 20px;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 input {
-    box-shadow: #223345 4px 8px 20px;
-    background-color: #1a1a1a;
+    box-shadow: #696969 4px 8px 20px;
+    background-color: #baabba;
+}
+
+h1 {
+    color: #223345;
+    text-align: center;
 }
 
 
@@ -74,8 +91,46 @@ input {
 }
 
 .jumbotron {
-    height: 88%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    min-height: 600px;
     background-color: #baabba;
+}
+
+/*botão*/
+.myButton {
+    
+    background: #baabba;
+    background-color:#223345;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #baabba;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    padding: 6px 24px;
+    text-decoration: none;
+}
+
+.myButton:hover {
+    background-color:rgba(2, 2, 2, 0.5);
+    color: #baabba;
+    -webkit-transition: 1s;
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
+}
+.folhinha{
+    padding: 0px 300px 0px 300px;
+}
+.folhinh i {
+    text-align: center;
+}
+.folhinha p {
+    text-align: left;
 }
 
 #logo{

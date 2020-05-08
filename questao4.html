@@ -12,7 +12,9 @@
     <link rel="stylesheet" type="text/css" href="css/style5.css">
     
     <title>Caio Henrique - QUESTÃO 4</title>
- 
+    <link rel="icon"
+        type="image.png"
+        href="icon.png">
 </head>
  
 <body>
@@ -39,97 +41,104 @@
     <main role="main">
         <div id="principal">
                 <div  class="container">
-                     <!-- Main jumbotron for a primary marketing message or call to action -->
-            <div class="jumbotron">
-                <form name="mostrar_salario">
-                    <div class="form-group">
-                        <label for="nome">Nome</label>
-                        <input required type="text" class="form-control" id="nome">
-                    </div>
+                    <!-- Main jumbotron for a primary marketing message or call to action -->
+                        <div class="jumbotron">
+                        <br>
+                        <h1>Calcular Índice</h1><br>
+                        <h1> de massa corporal</h1><br>
+                        <hr>
+                        <div>
+                            <form name="calcular_imc">
+                                <div class="form-group" style= width:150px;">
+                                    <label for="nome">Nome do paciente</label>
+                                    <input required type="text" class="form-control" id="nome">
+                                </div>
 
-                    <div class="form-row" style="padding-left: 5px;">
-                        <div class="form-group" id="algum" style="margin-right: 50px;">
-                            <label for="salario">Salario</label>
-                            <input required type="number" step="0.00" class="form-control" id="salario">
+                                <div class="form-row" style="padding-left: 5px;">
+                                    <div class="form-group" style= width:150px;">
+                                        <label for="peso">Peso</label>
+                                        <input required type="number" step="0.00" class="form-control" id="peso" placeholder="Em kg">
+                                    </div>
+
+                                    <div class="form-group" style="width:150px;">
+                                        <label for="altura">Altura</label>
+                                        <input required type="number" step="0.00" class="form-control" id="altura" min="0" placeholder="em metros">
+                                    </div>
+                                </div>
+                                <br>
+                                <a onclick="imc()" class="myButton">Calcular</a>
+                            </form>
                         </div>
 
-                        <div class="input-group">
-                            <select required class="custom-select" id="cargo"
-                                aria-label="Example select with button addon">
-                                <option value="Atendente">Atendente</option>
-                                <option value="Estoquista">Estoquista</option>
-                                <option value="Gerente">Gerente</option>
-                            </select>
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button"
-                                    onclick="mostrar()">Exibir</button>
+
+                        <script>
+                            function imc(){
+                                var nome = calcular_imc.nome.value;
+                                var peso = calcular_imc.peso.value;
+                                var altura = calcular_imc.altura.value;
+
+                                var alt2 = parseFloat(altura) * parseFloat(altura);
+
+                                var imc = parseFloat(peso) / parseFloat(alt2);
+
+
+                                
+                                if ((imc > 5) && (imc < 18.5)) {
+                                    var situ = "Baixo peso.";
+                                    var mens = "Peso baixo para a altura. Maior probabilidade de anorexia.";
+                                }
+                                else if ((imc >= 18.5) && (imc < 24.9)) {
+                                    var situ = "Peso normal.";
+                                    var mens = "Maior probabilidade de ser um indivíduo saudável.";
+                                }
+                                else if ((imc >= 25) && (imc < 29.9)) {
+                                    var situ = "Pré-obesidade.";
+                                    var mens = "Alguma probabilidade de problemas de saúde. Predisposição a tornar-se obeso.";
+                                }
+                                else if ((imc >= 30) && (imc < 34.9)) {
+                                    var situ = "Obesidade grau I.";
+                                    var mens = "Risco moderado de diabetes tipo II, hipertensão, colesterol e cardiopatia.";
+                                }
+                                else if ((imc >= 35) && (imc < 39.9)) {
+                                    var situ = "Obesidade grau II.";
+                                    var mens = "Risco grave. Aumenta o risco de doenças associadas. O risco de mortalidade aumenta em 50%.";
+                                }
+                                else if (imc < 5) {
+                                    var situ = "censurado";
+                                    var mens = "De frente parece que ta de lado e de lado parece que já foi embora!";
+                                }
+                                else {
+                                    var situ = "Obesidade grau III.";
+                                    var mens = "Risco muito grave. O risco de doenças associadas, bem como a mortalidade, aumentam em 90%.";
+                                }
+                                alert(nome + altura + peso + alt2 + imc + mens);
+                                document.getElementById("nom").innerHTML=(nome);
+                                document.getElementById("pes").innerHTML = (peso);
+                                document.getElementById("alt").innerHTML = (altura);
+                                document.getElementById("imc").innerHTML = (imc);
+                                document.getElementById("situ").innerHTML = (situ);
+                                document.getElementById("msg").innerHTML = (mens);
+                                document.getElementById(cor+".png").innerHTML = (cor);
+                            }
+
+                        </script>
+                            <div class="folhinha"><br>
+                                <h3 style="text-align: center;">RESULTADO</h3>
+                                <hr>
+                                <p>Paciente: <i id="nom"></i></p>
+                                <p>Peso: <i id="pes"></i>kg</p>
+                                <p>Altura: <i id="alt"></i>m </p>
+                                <p>I.M.C.: <i id="imc"></i> </p>
+                                <p>Situação: <i id="situ"></i> </p>
+                                <p>Aviso: <i id="msg"></i>  </p> 
                             </div>
-                        </div>
-                        <button onclick="mostrar()" type="button" class="btn btn-primary">Submit</button>
+                            
+
 
                     </div>
-
-                </form>
-            </div>
-
-
-            <script>
-                function mostrar() {
-                    nom = mostrar_salario.nome.value;
-                    salario = mostrar_salario.salario.value;
-                    cargo = mostrar_salario.cargo.value;
-
-                    if (cargo == "Atendente") {
-                        var aumento = parseFloat(salario) * 0.08;
-                        var salariob = parseFloat(salario) + parseFloat(aumento);
-                    }
-                    else if (cargo == "Estoquista") {
-                       var aumento = parseFloat(salario) * 0.06;
-                       var salariob = parseFloat(salario) + parseFloat(aumento);
-                    }
-                    else {
-                       var aumento = parseFloat(salario) * 0.03;
-                       var salariob = parseFloat(salario) + parseFloat(aumento);
-                    }
-
-                    if (salariob < 1.045, 01) {
-                        var inss = parseFloat(salariob) * 0.075;
-                        var salariol = parseFloat(salariob) - parseFloat(inss);
-                    }
-                    else if (salariob > 2.089, 60) {
-                        var inss = parseFloat(salariob) * 0.12;
-                        var salariol = parseFloat(salariob) - parseFloat(inss);
-                    }
-                    else {
-                        var inss = parseFloat(salariob) * 0.09;
-                        var salariol = parseFloat(salariob) - parseFloat(inss);
-                    }
-
-                    document.getElementById("nom").innerHTML = (nom);
-                    document.getElementById("carg").innerHTML = (cargo);
-                    document.getElementById("salb").innerHTML = (salariob);
-                    document.getElementById("sall").innerHTML = (salariol);
-
-                    alert(nom + " " + cargo + " " + aumento + " " + salariob + " " + inss + " " + salariol)
-                }
-            </script>
-            <br> <br>
-            <div style="padding: 0px 300px 20px 300px;">
-                <p style="text-align:center">Resultado:</p>
-                <p>Nome: <i id="nom"></i></p>
-                <p>Cargo: <i id="carg"></i> </p>
-                <p>Salario bruto: <i id="salb"></i>R$</p>
-                <p>Salario liquido: <i id="sall"></i>R$ </p>
-
-            </div>
-
-        </div>
-
+                </div>
 
     </main>
-
-        
-        </div>
 
 
 
