@@ -1,9 +1,156 @@
-<!doctype html>
-<html>
-  <head>
-   
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     
-  </body>
+    <!-- CSS by me-->
+    <link rel="stylesheet" type="text/css" href="CSS/style2.css">
+    
+    <title>Caio Henrique - QUESTÃO 1</title>
+ 
+</head>
+ 
+<body>
+    
+    <!-- Cabeçalho -->
+        <header>
+            <div class="container">
+                <div id="logo">
+                    <img src="logo.png">
+                </div>
+                <div id="menu">
+                    <a href="complete.html">HOME</a>
+                    <a href="questao1.html">QUESTÃO 1</a>
+                    <a href="#">QUESTÃO 2</a>
+                    <a href="#">QUESTÃO 3</a>
+                    <a href="#">QUESTÃO 4</a>
+                </div>    
+            </div>
+            <nav></nav>
+ 
+        </header>
+ 
+    <!-- Conteúdo -->
+    <main role="main">
+        <div id="principal">
+                <div  class="container">
+                    <div class="jumbotron">
+                    <h1>Calcular média</h1>
+                        <div style="padding: 0px 300px 0px 300px;">
+                            <form name="calcular_media">
+                                <div class="form-group"></div>
+                                    <label for="nome">Nome do aluno</label>
+                                    <input required type="text" class="form-control" id="nome">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="disciplina">Nome da disciplina</label>
+                                    <input required type="text" class="form-control" id="disciplina">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="nota1">Nota 1</label>
+                                    <input required type="number" class="form-control" id="nota1" min="0">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="nota2">Nota 2</label>
+                                    <input required type="number" class="form-control" id="nota2" min="0">
+                                </div>
+
+                                <button onclick="media()" type="button" class="btn btn-primary">Submit</button>
+                            </form>
+                    </div>
+
+
+                    <script>
+                    function media() {
+                        var nome = calcular_media.nome.value;
+                        var disc = calcular_media.disciplina.value;
+                        var nota1 = calcular_media.nota1.value;
+                        var nota2 = calcular_media.nota2.value;
+                        media = (parseFloat(nota1) + parseFloat(nota2)) / 2;
+                        if (media < 7) {
+                            var situ = "Reprovado!"
+                        }
+                        else {
+                            var situ = "Aprovado!"
+                        }
+
+                        document.getElementById("nom").innerHTML = (nome);
+                        document.getElementById("disc").innerHTML = (disc);
+                        document.getElementById("no1").innerHTML = (nota1);
+                        document.getElementById("no2").innerHTML = (nota2);
+                        document.getElementById("media").innerHTML = (media);
+                        document.getElementById("situ").innerHTML = (situ);
+
+
+                    }
+                </script>
+                <br><br><br>
+
+                <div id="tabela">
+                    <table class='table'>
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope='col'>Aluno</th>
+                                <th scope='col'>Disciplina</th>
+                                <th scope='col'>1º nota</th>
+                                <th scope='col'>2º nota</th>
+                                <th scope='col'>Média</th>
+                                <th scope='col'>Situação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <!-- <th scope='row'id="nome"></th>-->
+                                <td id="nom"></td>
+                                <td id="disc"></td>
+                                <td id="no1"></td>
+                                <td id="no2"></td>
+                                <td id="media"></td>
+                                <td id="situ"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div> 
+
+
+    </main>
+
+        
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    
+                </div>
+            </div>
+        </div>
+ 
+    <!-- Rodapé -->
+        <footer>
+            Desenvolvido por Caio Henrique
+            <br>
+            <a target="_blank" href="https://github.com/Caio-H17/Projeto-WEB"><img src="https://img.icons8.com/small/32/000000/github.png"/></a>
+        </footer>
+</body>
+ 
 </html>
