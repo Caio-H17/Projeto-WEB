@@ -23,6 +23,12 @@ body{
     margin: auto;
 }
 
+.jumbotron{
+    background-color: #baabba;
+    max-height: 500px;
+    padding-top: 20px;
+}
+
 header{
     background-color: #223345;
     height: 61px;
@@ -36,19 +42,19 @@ footer{
     text-align: center;
     font-family: 'Times New Roman';
     font-style: italic;
-    color: #aaaaaa
+    color: #aaaaaa;
 }
 
 #principal{
-    background-color: #222222;
+    background-image: url('bg.png');
     background-size: 100%;
     background-position: bottom;
     min-height: 300px;
-    padding: 100px;
+    padding: 10px;
 }
 
 label{
-   columns: #122112;
+   color: #122112;
     font-size: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-style: initial;

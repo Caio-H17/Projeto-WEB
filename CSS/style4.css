@@ -1,9 +1,9 @@
 /*my first CSS archive*/
 
 p{
-    color: #baabba;;
+    color: #111111;;
     font-size: 20px;
-    font-family: Courier;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
     text-align: center;
 }
@@ -39,11 +39,11 @@ footer{
 }
 
 #principal{
-    background-color: #222222;
+    background-image: url('bg.png');
     background-size: 100%;
     background-position: bottom;
     min-height: 300px;
-    padding: 100px;
+    padding: 10px;
 }
 
 tr {

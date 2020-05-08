@@ -39,11 +39,11 @@ footer{
 }
 
 #principal{
-    background-color: #222222;
+    background-image: url('bg.png');
     background-size: 100%;
     background-position: bottom;
     min-height: 300px;
-    padding: 100px;
+    padding: 10px;
 }
 
 #tabela {
@@ -63,7 +63,9 @@ footer{
 }
 
 .jumbotron {
-    height: 88%;
+    background-color: #baabba;
+    max-height: 500px;
+
 }
 
 label{
