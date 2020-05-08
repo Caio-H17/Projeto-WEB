@@ -77,74 +77,74 @@
                 </div>
 
 
-                <script>
+                    <script>
 
-                    function carne() {
-                        cliente = gerar_carne.nome.value;
-                        produto = gerar_carne.produto.value;
-                        valor = gerar_carne.valor.value;
-                        quant = gerar_carne.quantidade.value;
-                        parc = gerar_carne.parcelas.value;
+                        function carne() {
+                            cliente = gerar_carne.nome.value;
+                            produto = gerar_carne.produto.value;
+                            valor = gerar_carne.valor.value;
+                            quant = gerar_carne.quantidade.value;
+                            parc = gerar_carne.parcelas.value;
 
-                        if (parc==1) {
-                            valor = parseFloat(valor);
+                            if (parc==1) {
+                                valor = parseFloat(valor);
+                            }
+                            else if (parc==2){
+                                valor = (parseFloat(valor) / 2);
+                            }
+                            else if (parc==3){
+                                valor = (parseFloat(valor) / 3);
+                                valor = (parseFloat(valor) + 0.05);
+                            }
+                            else if (parc==4){
+                                valor = (parseFloat(valor) / 4);
+                                valor = (parseFloat(valor) + 0.05);
+                            }
+                            else if (parc==5){
+                                valor = (parseFloat(valor) / 5);
+                                valor = (parseFloat(valor) + 0.05);
+                            }
+                            else if (parc == 6) {
+                                valor = (parseFloat(valor) / 6);
+                                valor = (parseFloat(valor) + 0.12);
+                            }
+
+                            for (i = 1; i <= parc; i++) {
+                                
+                                document.getElementById("linha"+i).innerHTML = ("<p class='black' style='text-align:center'>===============================================================</p><br><p class='black' style='text-align:center;'>Lojas Jua</p><br><br> <p class='black' style='text-align:center;''>CLIENTE: " + cliente + "</p> <p class='black' style='text-align:center;'>PRODUTO: " + produto + "</p> <p class='black' style='text-align:center;'>VALOR: " + valor + "</p> <p style='text-align:center';>PARCELA: " + i + "/" + parc+"<p class='black' style='text-align:center'>===============================================================</p>");
+
+                            }
+
                         }
-                        else if (parc==2){
-                            valor = (parseFloat(valor) / 2);
-                        }
-                        else if (parc==3){
-                            valor = (parseFloat(valor) / 3);
-                            valor = (parseFloat(valor) + 0.05);
-                        }
-                        else if (parc==4){
-                            valor = (parseFloat(valor) / 4);
-                            valor = (parseFloat(valor) + 0.05);
-                        }
-                        else if (parc==5){
-                            valor = (parseFloat(valor) / 5);
-                            valor = (parseFloat(valor) + 0.05);
-                        }
-                        else if (parc == 6) {
-                            valor = (parseFloat(valor) / 6);
-                            valor = (parseFloat(valor) + 0.12);
-                        }
 
-                        for (i = 1; i <= parc; i++) {
-                            
-                            document.getElementById("linha"+i).innerHTML = ("<p class='black' style='text-align:center'>===============================================================</p><br><p class='black' style='text-align:center;'>Lojas Jua</p><br><br> <p class='black' style='text-align:center;''>CLIENTE: " + cliente + "</p> <p class='black' style='text-align:center;'>PRODUTO: " + produto + "</p> <p class='black' style='text-align:center;'>VALOR: " + valor + "</p> <p style='text-align:center';>PARCELA: " + i + "/" + parc+"<p class='black' style='text-align:center'>===============================================================</p>");
+                    </script>
 
-                        }
+                        <div classe="folhinha">
+                            <p id="linha1"></p>
+                        </div>
+                        <div classe="folhinha">
+                            <p id="linha2"></p>
+                        </div>
+                        <div classe="folhinha">
+                            <p id="linha3"></p>
+                        </div>
+                        <div classe="folhinha">
+                            <p id="linha4"></p>
+                        </div>
+                        <div classe="folhinha">
+                            <p id="linha5"></p>
+                        </div>
+                        <div classe="folhinha">
+                            <p id="linha6"></p>
+                        </div>
 
-                    }
-
-                </script>
-
-                    <div classe="folhinha">
-                        <p id="linha1"></p>
-                    </div>
-                    <div classe="folhinha">
-                        <p id="linha2"></p>
-                    </div>
-                    <div classe="folhinha">
-                        <p id="linha3"></p>
-                    </div>
-                    <div classe="folhinha">
-                        <p id="linha4"></p>
-                    </div>
-                    <div classe="folhinha">
-                        <p id="linha5"></p>
-                    </div>
-                    <div classe="folhinha">
-                        <p id="linha6"></p>
-                    </div>
-
-            </div> <!-- /container -->
-
-
-        </main>
+                </div>
+            </div>
+        </div>    
+    </main>
 
         
-        </div>
+        
 
 
 
