@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <!-- CSS by me-->
+    <link rel="stylesheet" type="text/css" href="CSS/style3.css">
+    
+    <title>Caio Henrique - QUESTÃO 2</title>
+ 
+</head>
+ 
+<body>
+    
+    <!-- Cabeçalho -->
+        <header>
+            <div class="container">
+                <div id="logo">
+                    <img src="logo.png">
+                </div>
+                <div id="menu">
+                    <a href="index.html">HOME</a>
+                    <a href="questao1.html">QUESTÃO 1</a>
+                    <a href="questao2.html">QUESTÃO 2</a>
+                    <a href="#">QUESTÃO 3</a>
+                    <a href="#">QUESTÃO 4</a>
+                </div>    
+            </div>
+            <nav></nav>
+ 
+        </header>
+ 
+    <!-- Conteúdo -->
+    <main role="main">
+        <div id="principal">
+                <div  class="container">
+
+        <main role="main">
+
+            <!-- Main jumbotron for a primary marketing message or call to action -->
+            <div class="jumbotron">
+                <div style="padding: 0px 300px 0px 300px;">
+                    <form name="gerar_carne">
+                        <div class="class=" form-control form-control-sm>
+                            <label for="nome">Nome do cliente</label>
+                            <input required type="text" class="form-control" id="nome">
+                        </div>
+
+                        <div class="form-row" style="padding-left: 10px;">
+                            <div class="form-group" id="algum" style="margin-right: 5px;">
+                                <label for="produto">Produto</label>
+                                <input required type="text" class="form-control" id="produto">
+                            </div>
+
+                            <div class="form-group" style="margin-left: 60px;">
+                                <label for="valor">Valor do produto</label>
+                                <input required type="number" step="0.00" class="form-control" id="valor" min="0">
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="algum2">
+                            <label for="quantidade">Quantidade</label>
+                            <input required type="number" class="form-control" id="quantidade" min="1">
+                        </div>
+
+                        <div class="form-group" id="algum3">
+                            <label for="parcelas">quantidade de parcelas</label>
+                            <input required type="number" class="form-control" id="parcelas" min="1" max="6"
+                                placeholder="Maximo de 6 parcelas">
+                        </div>
+
+                        <button onclick="carne()" type="button" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+
+
+                <script>
+
+                    function carne() {
+                        cliente = gerar_carne.nome.value;
+                        produto = gerar_carne.produto.value;
+                        valor = gerar_carne.valor.value;
+                        quant = gerar_carne.quantidade.value;
+                        parc = gerar_carne.parcelas.value;
+
+                        if (parc==1) {
+                            valor = parseFloat(valor);
+                        }
+                        else if (parc==2){
+                            valor = (parseFloat(valor) / 2);
+                        }
+                        else if (parc==3){
+                            valor = (parseFloat(valor) / 3);
+                            valor = (parseFloat(valor) + 0.05);
+                        }
+                        else if (parc==4){
+                            valor = (parseFloat(valor) / 4);
+                            valor = (parseFloat(valor) + 0.05);
+                        }
+                        else if (parc==5){
+                            valor = (parseFloat(valor) / 5);
+                            valor = (parseFloat(valor) + 0.05);
+                        }
+                        else if (parc == 6) {
+                            valor = (parseFloat(valor) / 6);
+                            valor = (parseFloat(valor) + 0.12);
+                        }
+
+                        for (i = 1; i <= parc; i++) {
+                            
+                            document.getElementById("linha"+i).innerHTML = ("<p class='black' style='text-align:center'>===============================================================</p><br><p class='black' style='text-align:center;'>Lojas Jua</p><br><br> <p class='black' style='text-align:center;''>CLIENTE: " + cliente + "</p> <p class='black' style='text-align:center;'>PRODUTO: " + produto + "</p> <p class='black' style='text-align:center;'>VALOR: " + valor + "</p> <p style='text-align:center';>PARCELA: " + i + "/" + parc+"<p class='black' style='text-align:center'>===============================================================</p>");
+
+                        }
+
+                    }
+
+                </script>
+
+                    <div classe="folhinha">
+                        <p id="linha1"></p>
+                    </div>
+                    <div classe="folhinha">
+                        <p id="linha2"></p>
+                    </div>
+                    <div classe="folhinha">
+                        <p id="linha3"></p>
+                    </div>
+                    <div classe="folhinha">
+                        <p id="linha4"></p>
+                    </div>
+                    <div classe="folhinha">
+                        <p id="linha5"></p>
+                    </div>
+                    <div classe="folhinha">
+                        <p id="linha6"></p>
+                    </div>
+
+            </div> <!-- /container -->
+
+
+        </main>
+
+        
+        </div>
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    
+                </div>
+            </div>
+        </div>
+ 
+    <!-- Rodapé -->
+        <footer>
+            Desenvolvido por Caio Henrique
+            <br>
+            <a target="_blank" href="https://github.com/Caio-H17/Projeto-WEB"><img src="https://img.icons8.com/small/32/000000/github.png"/></a>
+        </footer>
+</body>
+ 
+</html>
