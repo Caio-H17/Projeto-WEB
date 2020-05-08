@@ -1,0 +1,102 @@
+/*my first CSS archive*/
+
+p{
+    color: #baabba;;
+    font-size: 20px;
+    font-family: Courier;
+    font-style: italic;
+    text-align: center;
+}
+
+body{
+    background-color: #111111;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 960px;
+    margin: auto;
+}
+
+header{
+    background-color: #223345;
+    height: 61px;
+    padding: 10px;
+}
+
+footer{
+    background-color: #222222;
+    min-height: 40px;
+    clear: both;
+    text-align: center;
+    font-family: 'Times New Roman';
+    font-style: italic;
+    color: #aaaaaa
+}
+
+#principal{
+    background-color: #222222;
+    background-size: 100%;
+    background-position: bottom;
+    min-height: 300px;
+    padding: 100px;
+}
+
+tr {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+thead {
+    background-image: linear-gradient(to bottom, #1b1b1b);
+    box-shadow: #696969 4px 8px 20px;
+}
+
+label {
+    color: #223345;
+    font-size: 20px;
+}
+
+input {
+    box-shadow: #223345 4px 8px 20px;
+    background-color: #1a1a1a;
+}
+
+
+#tabela {
+    padding: 0px 300px 0px 300px;
+}
+
+.jumbotron {
+    height: 88%;
+    background-color: #baabba;
+}
+
+#logo{
+    float: left;
+    margin-bottom: 15px;
+}
+
+#menu{
+    margin-top: 10px;
+    float: right;
+}
+
+#menu a{
+    padding: 23px 10px;
+    text-decoration: none;
+    color: #baabba;
+    text-shadow: 1px 1px 1px #111111;
+}
+
+#menu a:hover{
+    background-color:rgba(2, 2, 2, 0.5);
+    color: #baabba;
+    -webkit-transition: 1s;
+}
+

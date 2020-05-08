@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <!-- CSS by me-->
+    <link rel="stylesheet" type="text/css" href="CSS/style4.css">
+    
+    <title>Caio Henrique - QUESTÃO 2</title>
+ 
+</head>
+ 
+<body>
+    
+    <!-- Cabeçalho -->
+        <header>
+            <div class="container">
+                <div id="logo">
+                    <img src="logo.png">
+                </div>
+                <div id="menu">
+                    <a href="index.html">HOME</a>
+                    <a href="questao1.html">QUESTÃO 1</a>
+                    <a href="questao2.html">QUESTÃO 2</a>
+                    <a href="questao3.html">QUESTÃO 3</a>
+                    <a href="questao4.html">QUESTÃO 4</a>
+                </div>    
+            </div>
+            <nav></nav>
+ 
+        </header>
+ 
+    <!-- Conteúdo -->
+    <main role="main">
+        <div id="principal">
+                <div  class="container">
+                     <!-- Main jumbotron for a primary marketing message or call to action -->
+            <div class="jumbotron">
+                <form name="mostrar_salario">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input required type="text" class="form-control" id="nome">
+                    </div>
+
+                    <div class="form-row" style="padding-left: 5px;">
+                        <div class="form-group" id="algum" style="margin-right: 50px;">
+                            <label for="salario">Salario</label>
+                            <input required type="number" step="0.00" class="form-control" id="salario">
+                        </div>
+
+                        <div class="input-group">
+                            <select required class="custom-select" id="cargo"
+                                aria-label="Example select with button addon">
+                                <option value="Atendente">Atendente</option>
+                                <option value="Estoquista">Estoquista</option>
+                                <option value="Gerente">Gerente</option>
+                            </select>
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button"
+                                    onclick="mostrar()">Exibir</button>
+                            </div>
+                        </div>
+                        <button onclick="mostrar()" type="button" class="btn btn-primary">Submit</button>
+
+                    </div>
+
+                </form>
+            </div>
+
+
+            <script>
+                function mostrar() {
+                    nom = mostrar_salario.nome.value;
+                    salario = mostrar_salario.salario.value;
+                    cargo = mostrar_salario.cargo.value;
+
+                    if (cargo == "Atendente") {
+                        var aumento = parseFloat(salario) * 0.08;
+                        var salariob = parseFloat(salario) + parseFloat(aumento);
+                    }
+                    else if (cargo == "Estoquista") {
+                       var aumento = parseFloat(salario) * 0.06;
+                       var salariob = parseFloat(salario) + parseFloat(aumento);
+                    }
+                    else {
+                       var aumento = parseFloat(salario) * 0.03;
+                       var salariob = parseFloat(salario) + parseFloat(aumento);
+                    }
+
+                    if (salariob < 1.045, 01) {
+                        var inss = parseFloat(salariob) * 0.075;
+                        var salariol = parseFloat(salariob) - parseFloat(inss);
+                    }
+                    else if (salariob > 2.089, 60) {
+                        var inss = parseFloat(salariob) * 0.12;
+                        var salariol = parseFloat(salariob) - parseFloat(inss);
+                    }
+                    else {
+                        var inss = parseFloat(salariob) * 0.09;
+                        var salariol = parseFloat(salariob) - parseFloat(inss);
+                    }
+
+                    document.getElementById("nom").innerHTML = (nom);
+                    document.getElementById("carg").innerHTML = (cargo);
+                    document.getElementById("salb").innerHTML = (salariob);
+                    document.getElementById("sall").innerHTML = (salariol);
+
+                    alert(nom + " " + cargo + " " + aumento + " " + salariob + " " + inss + " " + salariol)
+                }
+            </script>
+            <br> <br>
+            <div style="padding: 0px 300px 20px 300px;">
+                <p style="text-align:center">Resultado:</p>
+                <p>Nome: <i id="nom"></i></p>
+                <p>Cargo: <i id="carg"></i> </p>
+                <p>Salario bruto: <i id="salb"></i>R$</p>
+                <p>Salario liquido: <i id="sall"></i>R$ </p>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+        
+        </div>
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    
+                </div>
+            </div>
+        </div>
+ 
+    <!-- Rodapé -->
+        <footer>
+            Desenvolvido por Caio Henrique
+            <br>
+            <a target="_blank" href="https://github.com/Caio-H17/Projeto-WEB"><img src="https://img.icons8.com/small/32/000000/github.png"/></a>
+        </footer>
+</body>
+ 
+</html>
